@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: main  # or master if you are using master branch
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "Upload “{{path}}”"
+    deleteMedia: "Delete “{{path}}”"
+
+media_folder: "uploads" # Folder where images are stored
+public_folder: "/uploads"
+
+collections:
+  - name: "posts" # Collection name
+    label: "Posts" # Name that shows in the CMS
+    folder: "posts" # Folder where posts will be stored
+    create: true # Allow creating new posts
+    slug: "{{slug}}" # URL format for posts
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image", required: false }
