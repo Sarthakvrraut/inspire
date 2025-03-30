@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KYSTDWQEV4"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+    
+            gtag('config', 'G-KYSTDWQEV4');
+        </script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Batch - PCMB Courses</title>
+    <link rel="stylesheet" href="css\cources.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,
+wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/a327dedaf8.js" crossorigin="anonymous"></script>
+
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="Shortcut Icon" type="image/png/jpg" href="images\NGO-logo-bgr.png">
+</head>
+<body>
+
+    <section2 class="header">
+
+        <nav>
+            <a href="index.html"><img src="images\logo.jpg" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#courses" class="nav-link">Our Courses</a></li>
+                    <li><a href="index.html#students" class="nav-link">Alumni</a></li>
+                    <li><a href="about-us.html" class="nav-link">About Us</a></li>
+                    <li><a href="faculty.html" class="nav-link">Our Faculty</a></li>
+                    <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+                </ul>
+
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+
+        <script>
+            document.getElementById("scrollButton").addEventListener("click", function() {
+                document.querySelector(".softwares").scrollIntoView({ behavior: "smooth" });
+            });
+        </script>
+
+    </section2>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Regular Batch Program</h1>
+            <h2>Comprehensive PCMB Coaching for 11th & 12th Students</h2>
+            <a href="apply-form.html" class="btn">Enroll Now</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Program Highlights</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Duration</h3>
+                    <p>1-year program for 12th students</p>
+                    <p>2-year program for 11th students</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Subjects</h3>
+                    <p>Physics, Chemistry, Mathematics, Biology</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Batch Size</h3>
+                    <p>Limited to 30 students for personalized attention</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Schedule</h3>
+                    <p>Flexible timing options available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="facilities">
+        <div class="container">
+            <h2>Our Facilities</h2>
+            <div class="facility-grid">
+                <div class="facility-card">
+                    <i class="fas fa-chalkboard"></i>
+                    <h3>Smart Boards</h3>
+                    <p>Interactive learning with digital smart boards</p>
+                </div>
+                <div class="facility-card">
+                    <i class="fas fa-snowflake"></i>
+                    <h3>AC Classrooms</h3>
+                    <p>Comfortable air-conditioned learning environment</p>
+                </div>
+                <div class="facility-card">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Library</h3>
+                    <p>Well-stocked library with reference materials</p>
+                </div>
+                <div class="facility-card">
+                    <i class="fas fa-wifi"></i>
+                    <h3>Wi-Fi Campus</h3>
+                    <p>High-speed internet for research and learning</p>
+                </div>
+                <div class="facility-card">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Digital Resources</h3>
+                    <p>Access to online study materials and practice tests</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="curriculum">
+        <div class="container">
+            <h2>Curriculum</h2>
+            <div class="tabs">
+                <button class="tab-btn active" onclick="openTab(event, 'physics')">Physics</button>
+                <button class="tab-btn" onclick="openTab(event, 'chemistry')">Chemistry</button>
+                <button class="tab-btn" onclick="openTab(event, 'mathematics')">Mathematics</button>
+                <button class="tab-btn" onclick="openTab(event, 'biology')">Biology</button>
+            </div>
+
+            <div id="physics" class="tab-content active">
+                <h3>Physics Curriculum</h3>
+                <ul>
+                    <li>Mechanics</li>
+                    <li>Thermodynamics</li>
+                    <li>Electromagnetism</li>
+                    <li>Optics</li>
+                    <li>Modern Physics</li>
+                </ul>
+            </div>
+
+            <div id="chemistry" class="tab-content">
+                <h3>Chemistry Curriculum</h3>
+                <ul>
+                    <li>Physical Chemistry</li>
+                    <li>Organic Chemistry</li>
+                    <li>Inorganic Chemistry</li>
+                    <li>Analytical Chemistry</li>
+                </ul>
+            </div>
+
+            <div id="mathematics" class="tab-content">
+                <h3>Mathematics Curriculum</h3>
+                <ul>
+                    <li>Algebra</li>
+                    <li>Calculus</li>
+                    <li>Trigonometry</li>
+                    <li>Coordinate Geometry</li>
+                    <li>Statistics & Probability</li>
+                </ul>
+            </div>
+
+            <div id="biology" class="tab-content">
+                <h3>Biology Curriculum</h3>
+                <ul>
+                    <li>Cell Biology</li>
+                    <li>Genetics</li>
+                    <li>Human Physiology</li>
+                    <li>Plant Physiology</li>
+                    <li>Ecology & Environment</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="testimonials">
+        <div class="container">
+            <h2>Student Testimonials</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="quote">"The regular batch program helped me secure 95% in my board exams and a good rank in competitive exams."</div>
+                    <div class="student">- Rahul Sharma, Batch of 2023</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote">"The teachers are extremely supportive and the facilities are excellent. I'm glad I joined the 2-year program."</div>
+                    <div class="student">- Priya Patel, Batch of 2022</div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Excel in Your Studies?</h2>
+            <p>Join our Regular Batch Program and build a strong foundation for your future.</p>
+            <a href="apply-form.html" class="btn">Enroll Today</a>
+        </div>
+    </section>
+
+    <section class="footer-sr">
+        <a href="https://srcreation.netlify.app"><h4>About Us</h4></a>
+        <p></p>
+        <div class="icons">
+            <a href="https://www.facebook.com/sarthak.raut.5036?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/sarthak_2323"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/sarthak_2007_/?igshid=YmMyMTA2M2Y%3D"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/sarthak-raut2323/"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <a href="https://srcreation.netlify.app"><p>Made with <i class="fa fa-heart-o"></i> By SR</p></a>
+    </section>
+
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabContent, tabBtn;
+            
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].classList.remove("active");
+            }
+            
+            tabBtn = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tabBtn.length; i++) {
+                tabBtn[i].classList.remove("active");
+            }
+            
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+
+        <!------JavaScript for Toggle Menu------>
+
+        <script>
+            var navLinks = document.getElementById("navLinks");
+    
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+    
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+            }
+        </script>
+    
+</body>
+</html>

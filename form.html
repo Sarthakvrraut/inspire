@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DynaMate Course</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,
+wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/a327dedaf8.js" crossorigin="anonymous"></script>
+
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="Shortcut Icon" type="image/png/jpg" href="images\NGO-logo-bgr.png">
+
+
+</head>
+
+<body>
+
+    <section class="header">
+
+        <nav>
+            <a href="index.html"><img src="images\logo.jpg" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#courses" class="nav-link">Our Courses</a></li>
+                    <li><a href="index.html#students" class="nav-link">Alumni</a></li>
+                    <li><a href="about-us.html" class="nav-link">About Us</a></li>
+                    <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+                </ul>
+
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+
+        <script>
+            document.getElementById("scrollButton").addEventListener("click", function() {
+                document.querySelector(".softwares").scrollIntoView({ behavior: "smooth" });
+            });
+        </script>
+
+    </section>
+
+    <section class="about-us">
+
+        <div class="row">
+            <div class="about-col">
+                <h1>Fill out this form for the free online Molecular Dynamics workshop</h1>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="contact-col">
+
+            <form class="gform pure-form pure-form-stacked" name="contact" method="POST"
+                data-email="srclints@outlook.in"
+                action="https://script.google.com/macros/s/AKfycbwSJ1qTS4Sx7jhf2MynOzxAQYmLRHRFhyfZL7zpChtn2HUMdYW34QhkYl9ddAC_KG93eA/exec"
+                action="upload.php">
+
+                <input type="text" name="Name" placeholder="Enter your name" required>
+                <input type="contry" name="Contry" placeholder="Enter your contry name" required>
+                <input type="email" name="email" placeholder="Enter your email address" required>
+                <input type="number" name="contact" placeholder="Enter your WhatsApp number" required>
+                <input type="text" name="university" placeholder="Enter your university name" required>
+
+                <textarea rows="8" name="message" placeholder="Message"></textarea>
+
+                <button type="submit" class="hero-btn red-btn" value="Upload Image">Send Massage</button>
+
+            </form>
+
+
+        </div>
+
+
+
+        <!-- Thankyou_message --><br>
+        <div class="thankyou_message"
+            style="display:none;background:none;border:8px solid gray;border-radius: 40px;width: 400px;padding-top: 15px;padding-bottom: 40px;padding-left: 20px;padding-right: 20px;">
+            <br><br>
+            <span></span>
+            <h1>Thanks for contacting us!</h1>
+            <h1>*******</h1>
+        </div>
+        </form>
+        <script data-cfasync="false" type="text/javascript">
+
+            (function () {
+                function validEmail(email) {
+                    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+                    return re.test(email);
+                }
+
+                function validateHuman(honeypot) {
+                    if (honeypot) {
+                        console.log("Robot Detected!");
+                        return true;
+                    } else {
+                        console.log("Welcome Human!");
+                    }
+                }
+                function getFormData(form) {
+                    var elements = form.elements;
+
+                    var fields = Object.keys(elements).filter(function (k) {
+                        return (elements[k].name !== "honeypot");
+                    }).map(function (k) {
+                        if (elements[k].name !== undefined) {
+                            return elements[k].name;
+                        } else if (elements[k].length > 0) {
+                            return elements[k].item(0).name;
+                        }
+                    }).filter(function (item, pos, self) {
+                        return self.indexOf(item) == pos && item;
+                    });
+
+                    var formData = {};
+                    fields.forEach(function (name) {
+                        var element = elements[name];
+                        formData[name] = element.value;
+                        if (element.length) {
+                            var data = [];
+                            for (var i = 0; i < element.length; i++) {
+                                var item = element.item(i);
+                                if (item.checked || item.selected) {
+                                    data.push(item.value);
+                                }
+                            }
+                            formData[name] = data.join(', ');
+                        }
+                    });
+
+                    // add form-specific values into the data
+                    formData.formDataNameOrder = JSON.stringify(fields);
+                    formData.formGoogleSheetName = form.dataset.sheet || "Sheet1"; // default sheet name
+                    formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
+
+                    console.log(formData);
+                    return formData;
+                }
+
+                function handleFormSubmit(event) {
+                    event.preventDefault();
+                    var form = event.target;
+                    var data = getFormData(form);
+                    if (data.email && !validEmail(data.email)) {
+                        var invalidEmail = form.querySelector(".email-invalid");
+                        if (invalidEmail) {
+                            invalidEmail.style.display = "block";
+                            return false;
+                        }
+                    } else {
+                        alert("Form Submited Successfully");
+                        disableAllButtons(form);
+                        var url = form.action;
+                        var xhr = new XMLHttpRequest();
+                        xhr.open('POST', url);
+                        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                        xhr.onreadystatechange = function () {
+                            console.log(xhr.status, xhr.statusText);
+                            console.log(xhr.responseText);
+                            var formElements = form.querySelector(".form-elements")
+                            if (formElements) {
+                                formElements.style.display = "none"; // hide form
+                            }
+                            var thankYouMessage = form.querySelector(".thankyou_message");
+                            if (thankYouMessage) {
+                                thankYouMessage.style.display = "block";
+                            }
+                            return;
+                        };
+                        var encoded = Object.keys(data).map(function (k) {
+                            return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+                        }).join('&');
+                        xhr.send(encoded);
+                    }
+                }
+
+                function loaded() {
+                    console.log("Contact form submission handler loaded successfully.");
+                    var forms = document.querySelectorAll("form.gform");
+                    for (var i = 0; i < forms.length; i++) {
+                        forms[i].addEventListener("submit", handleFormSubmit, false);
+                    }
+                };
+                document.addEventListener("DOMContentLoaded", loaded, false);
+
+                function disableAllButtons(form) {
+                    var buttons = form.querySelectorAll("button");
+                    for (var i = 0; i < buttons.length; i++) {
+                        buttons[i].disabled = true;
+                    }
+                }
+            })();
+        </script>
+
+
+
+
+    </section>
+
+
+    <!--------- Footer -------->
+
+    <section class="footer-sr">
+        <h4>About Us</h4>
+        <p></p>
+        <div class="icons">
+            <a href="https://www.facebook.com/sarthak.raut.5036?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/sarthak_2323"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/sarthak_2007_/?igshid=YmMyMTA2M2Y%3D"><i class="fa fa-instagram"></i></a>
+            <a href="www.linkedin.com/in/sarthak-raut2323"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <p>Made with <i class="fa fa-heart-o"></i> By SR Creations</p>
+    </section>
+
+
+
+
+    <!------JavaScript for Toggle Menu------>
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+
+
+</body>
+
+</html>
